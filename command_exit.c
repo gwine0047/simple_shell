@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * command_exit - exits a shell program.
+ * @command_tokens: command strings.
+ * @command: command.
+ * @count: integer status.
+ * @argv: commandline arguments.
+ * Return: void.
+*/
 void command_exit(char **command_tokens, char *command, int count, char **argv)
 {
     int state, a = 0;

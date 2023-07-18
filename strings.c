@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * _putchar - prints a character to stdin.
+ * @ch: character to be printed.
+ * Return: the character.
+*/
 
 int _putchar(char ch)
 {
@@ -11,6 +16,16 @@ void write_in(const char *ch)
     write(STDOUT_FILENO, ch, _strlen(ch));
 }
 
+
+void _puts(char *str)
+{
+    int a = 0;
+
+    for (; str[a]; a++)
+    {
+        _putchar(str[a]);
+    }
+}
 
 int _strlen(const char *str)
 {

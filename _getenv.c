@@ -1,4 +1,10 @@
 #include "main.h"
+/**
+ * _getenv - gets environmental variables.
+ * @file: the parameter variable to be obtained.
+ * Returns: a pointer to the parameter provided.
+*/
+
 char *_getenv(char *file)
 {
     size_t first_length, second_length;

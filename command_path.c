@@ -1,4 +1,10 @@
 #include "main.h"
+
+/**
+ * command_path - creates a command path for a command.
+ * @command_tokens: command.
+ * Return: 0 if successful and 1 if not.
+*/
 int command_path(char **command_tokens)
 {
     char *env_path, *token, *built_path;
@@ -24,6 +30,13 @@ int command_path(char **command_tokens)
     free(env_path);
     return (1);
 }
+
+/**
+ * create_path - creates a path for a command token.
+ * @command_token: command,
+ * @token: command path to be matched.
+ * Return: path
+*/
 
 char *create_path(char *command_token, char *token)
 {

@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * change_dir - changes directories.
+ * @command_tokens: array of commands.
+ * @state: exit status.
+ * Return: 0 if successful.
+*/
+
 int change_dir (char **command_tokens, __attribute__((unused))int state)
 {
     char cwd[PATH_MAX];
@@ -30,6 +37,13 @@ int change_dir (char **command_tokens, __attribute__((unused))int state)
     return (0);
 }
 
+/**
+ * command_help - prints the help command.
+ * @command_tokens: array of commands.
+ * @state: exit status.
+ * Return: 0 if successful.
+*/
+
 int command_help(char **command_tokens, __attribute__((unused))int state)
 {
     int file_desc, read_bytes, write_bytes;
@@ -55,6 +69,12 @@ int command_help(char **command_tokens, __attribute__((unused))int state)
     return (0);
 }
 
+/**
+ * command_echo - echo command.
+ * @command_tokens: array of commands.
+ * @state: exit status.
+ * Return: 0 if successful.
+*/
 int command_echo(char **command_tokens, int state)
 {
     char *path;
@@ -84,6 +104,12 @@ int command_echo(char **command_tokens, int state)
     return (1);
 }
 
+/**
+ * command_env - prints the env variables.
+ * @command_tokens: array of commands.
+ * @state: exit status.
+ * Return: 0 if successful.
+*/
 
 int command_env(__attribute__((unused))char **command_tokens, __attribute__((unused))int state)
 {
@@ -99,7 +125,12 @@ int command_env(__attribute__((unused))char **command_tokens, __attribute__((unu
     }
     return (0);
 }
-
+/**
+ * command_history - prints commandline history.
+ * @command_tokens: array of commands.
+ * @state: exit status.
+ * Return: 0 if successful.
+*/
 int command_history(__attribute__((unused))char **command_tokens, __attribute__((unused))int state)
 {
     char *filename = ".simple_shell_history", *line = NULL, *converted_char;

@@ -1,4 +1,13 @@
 #include "main.h"
+
+/**
+ * execute_file_command - executes a command from a file.
+ * @line: command line.
+ * @file_ptr: file pointer.
+ * @argv: array of arguments.
+ * Return: void.
+*/
+
 void execute_file_command(char *line, int count, FILE *file_ptr, char **argv)
 {
     int state = 0;

@@ -1,4 +1,10 @@
 #include "main.h"
+
+/**
+ * convert-to_char - converts an integer to a character.
+ * @number: integer to be converted.
+ * Return: the coverted string.
+*/
 char *convert_to_char(unsigned int number)
 {
     int a = 0, length = 0;

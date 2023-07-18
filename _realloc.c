@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * _realloc - re-allocates memory
+ * @pointer: pointer to an already allocated memory.
+ * @old_size: size of the previous allocated memory.
+ * @new_size: size of the newly allocated memory.
+ * Return: void.
+*/
 void *_realloc(void *pointer, unsigned int old_size, unsigned int new_size)
 {
     void *memory;

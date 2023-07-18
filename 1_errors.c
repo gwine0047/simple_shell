@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * wite_error - writes an error message to the standard output.
+ * @argv: command argument.
+ * @count: exit status.
+ * @command_tokens: command.
+ * Return : void.
+*/
 
 void write_error(char **argv, int count, char **command_tokens)
 {
@@ -14,6 +21,14 @@ void write_error(char **argv, int count, char **command_tokens)
 
     free(converted_char);
 }
+
+/**
+ * print_error - writes an error message to the standard output.
+ * @argv: command argument.
+ * @count: exit status.
+ * @command_tokens: command.
+ * Return : void.
+*/
 
 void print_error(char *command, int count, char **argv)
 {

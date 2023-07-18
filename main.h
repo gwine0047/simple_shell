@@ -26,7 +26,7 @@ typedef struct inbuiltt
 
 /*prompt, command collation and manipulation*/
 void print_prompt();
-void *fill(void *ptr, int nil, unsigned int size);
+int *fill(void *ptr, int nil, unsigned int size);
 void hash(char *input);
 char *_getline();
 char *transfer(char *to, char *from, unsigned int size);
@@ -60,6 +60,7 @@ char *_strchr(char *string, char ch);
 char *_strdup(char *str);
 int _strncmp(const char *first, const char *second, size_t n);
 char *_strcpy(char *to, char *from);
+void _puts(char *str);
 
 int command_inbuilt(char **command_tokens, int state);
 int if_inbuilt(char **command_tokens);

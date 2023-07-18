@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * if_inbuilt - checks if a command is an inbuilt command.
+ * @command_tokens: command.
+ * Return: 0 if successful and -1 if not.
+*/
 int if_inbuilt(char **command_tokens)
 {
     int a;
@@ -25,6 +30,13 @@ int if_inbuilt(char **command_tokens)
     }
     return (-1);
 }
+
+/**
+ * command_inbuilt - matches a command with an inbuilt function.
+ * @command_tokens: command.
+ * @state: integer status.
+ * Return: the function if successful and -1 if not.
+*/
 
 int command_inbuilt(char **command_tokens, int state)
 {

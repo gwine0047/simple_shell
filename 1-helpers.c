@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * hash - replaces # character with a null terminator.
+ * @store: is a pointer to characters to be checked.
+ * Return: void.
+*/
 void hash(char *store)
 {
     int a = 0;
@@ -15,6 +19,14 @@ void hash(char *store)
     }
 }
 
+/**
+ * transfer - copies a string.
+ * @from: string to be copied.
+ * @to: newly copied string .
+ * @size: the size of characters to be copied.
+ * Return: the newly copied string.
+*/
+
 char *transfer(char *to, char *from, unsigned int size)
 {
     unsigned int a = 0;
@@ -27,7 +39,15 @@ char *transfer(char *to, char *from, unsigned int size)
     return (to);
 }
 
-void *fill(void *ptr, int nil, unsigned int size)
+/**
+ * fill - fills up a pointer with a constant byte.
+ * @ptr: pointer to be filled.
+ * @nil: to be alloted.
+ * @size: amount to be alloted.
+ * Return: pointer to the filled.
+*/
+
+int *fill(void *ptr, int nil, unsigned int size)
 {
     char *rep;
     unsigned int a = 0;
@@ -42,6 +62,11 @@ void *fill(void *ptr, int nil, unsigned int size)
     return (ptr);
 }
 
+/**
+ * length_of_int - finds the length of an integer.
+ * @number: integer.
+ * Return: the length of the integer.
+*/
 
 int length_of_int(int number)
 {
@@ -54,6 +79,12 @@ int length_of_int(int number)
     return (length);
 }
 
+/**
+ * reverse_call - reverses an array.
+ * @array: is the array to be reversed.
+ * @length: length of the array.
+ * Return: void.
+*/
 
 void reverse_call(char *array, int length)
 {
@@ -70,6 +101,12 @@ void reverse_call(char *array, int length)
     }
 }
 
+/**
+ * print_positive - prints a positive integer.
+ * @num: negative number.
+ * Return: void.
+*/
+
 void print_positive(unsigned int num)
 {
     unsigned int holder;
@@ -80,6 +117,12 @@ void print_positive(unsigned int num)
 
     _putchar(holder % 10 + '0');
 }
+
+/**
+ * print_negative - prints a negative integer.
+ * @num: integer
+ * Return: void
+*/
 
 void print_negative(int num)
 {
@@ -97,6 +140,11 @@ void print_negative(int num)
     _putchar(holder % 10 + '0');
 }
 
+/**
+ * _atoi - converts a character to an integer.
+ * @str: is a pointer to an array of characters.
+ * Return: converted integer.
+*/
 int _atoi(char *str)
 {
     int index1, index2, neg, num;

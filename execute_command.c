@@ -1,4 +1,13 @@
 #include "main.h"
+
+/**
+ * execute_command - executes a command.
+ * @command_tokens: array of commands
+ * @command: command.
+ * @count: exit status.
+ * @argv: array of commandline argument.
+ * Return: 0 if successful.
+*/
 int execute_command(char **command_tokens, char *command, int count, char **argv)
 {
     int status;

@@ -1,4 +1,12 @@
 #include "main.h"
+
+/**
+ * file_command - reads a command from a file.
+ * @name: name of the file.
+ * @command: array of commands.
+ * Return: void.
+*/
+
 void file_command(char *name, char **commands)
 {
     int count = 0;

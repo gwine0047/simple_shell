@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * parsing - breaks a pointer to an array of characters into tokens.
+ * @command: command sring.
+ * Return: an array of strings.
+*/
+
 char **parsing(char *command)
 {
     char **tokens, *token, *copy;

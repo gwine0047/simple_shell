@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * _getline - reads a char from a stream.
+ * Returns: a pointer to the char read.
+*/
 
 char *_getline()
 {
