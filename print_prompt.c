@@ -2,5 +2,5 @@
 
 void print_prompt()
 {
-    puts("$cisfun ");
+    puts("$ ");
 }
