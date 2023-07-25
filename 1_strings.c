@@ -22,7 +22,7 @@ char *_strcpy(char *to, char *from)
  * _strncmp - compares two strings
  * @first: first string.
  * @second: second string.
- * @n: the amount of bytes to be copied.
+ * @n: the amount of bytes to be compared.
  * Return: 0 if successful.
 */
 int _strncmp(const char *first, const char *second, size_t n)
