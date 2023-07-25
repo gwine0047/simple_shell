@@ -133,7 +133,6 @@ List of allowed functions and system calls
     wait4 (man 2 wait4)
     write (man 2 write)
 
-    
 ### Custom Function (Recreation of Standard Function in C)
  * _strncpy
  * _strlen

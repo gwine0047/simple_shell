@@ -8,9 +8,9 @@
 
 void _free(char **command_tokens, char *command)
 {
-    free(command_tokens);
-    free(command);
+	free(command_tokens);
+	free(command);
 
-    command_tokens = NULL;
-    command = NULL;
+	command_tokens = NULL;
+	command = NULL;
 }

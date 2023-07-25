@@ -8,40 +8,40 @@
 
 char **parsing(char *command)
 {
-    char **tokens, *token, *copy;
-    int a = 0, token_count = 0;
+	char **tokens, *token, *copy;
+	int a = 0, token_count = 0;
 
-    if (command == NULL)
-        return (NULL);
-    
-    copy = strdup(command);
-    if (copy == NULL)
-        return (NULL);
+	if (command == NULL)
+		return (NULL);
 
-    token = strtok(copy, "\n ");
-    while (token)
-    {
-        token_count++;
-        token = strtok(NULL, "\n ");
-    }
+	copy = strdup(command);
+	if (copy == NULL)
+		return (NULL);
 
-    tokens = malloc(sizeof(char *) * token_count + 1);
+	token = strtok(copy, "\n ");
+	while (token)
+	{
+		token_count++;
+		token = strtok(NULL, "\n ");
+	}
 
-    if (tokens == NULL)
-    {
-        perror("hsh");
-        return (NULL);
-    }
+	tokens = malloc(sizeof(char *) * token_count + 1);
 
-    token = strtok(command, "\n ");
+	if (tokens == NULL)
+	{
+		perror("hsh");
+		return (NULL);
+	}
 
-    while (token != NULL)
-    {
-        tokens[a] = token;
-        token = strtok(NULL, "\n ");
-        a++;
-    }
-    tokens[a] = NULL;
-    free(copy);
-    return (tokens);
+	token = strtok(command, "\n ");
+
+	while (token != NULL)
+	{
+		tokens[a] = token;
+		token = strtok(NULL, "\n ");
+		a++;
+	}
+	tokens[a] = NULL;
+	free(copy);
+	return (tokens);
 }

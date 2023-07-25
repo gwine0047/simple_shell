@@ -18,21 +18,28 @@ extern char **environ;
 #include <fcntl.h>
 #include <linux/limits.h>
 
-typedef struct inbuiltt
+/**
+*struct inbuilt - contains a char and a function pointer.
+*@command: is a command.
+*@function: calls the function related to command.
+*/
+
+typedef struct inbuilt
 {
-    char *command;
-    int (*function)(char **command_tokens, int state);
+	char *command;
+	int (*function)(char **command_tokens, int state);
 } builtin;
 
 /*prompt, command collation and manipulation*/
-void print_prompt();
+void print_prompt(void);
 int *fill(void *ptr, int nil, unsigned int size);
 void hash(char *input);
 char *_getline();
 char *transfer(char *to, char *from, unsigned int size);
 int command_history(char **command_tokens, int state);
 char **parsing(char *command);
-void command_exit(char **command_tokens, char *command, int count, char **argv);
+void command_exit(char **command_tokens,
+char *command, int count, char **argv);
 
 /*Memory management*/
 void *_realloc(void *pointer, unsigned int old_size, unsigned int new_size);
@@ -44,11 +51,10 @@ int _atoi(char *str);
 void command_exit_file(char **command_tokens, char *line, FILE *file_desc);
 
 /*Handlers*/
-void write_error(char **argv, int count, char** command_tokens);
+void write_error(char **argv, int count, char **command_tokens);
 char *convert_to_char(unsigned int number);
 void reverse_call(char *array, int length);
 int length_of_int(int number);
-
 
 /*Strings*/
 void write_in(const char *ch);
@@ -64,13 +70,14 @@ void _puts(char *str);
 
 int command_inbuilt(char **command_tokens, int state);
 int if_inbuilt(char **command_tokens);
-int change_dir (char **command_tokens, __attribute__((unused))int state);
+int change_dir(char **command_tokens, __attribute__((unused))int state);
 
 void _free(char **command_tokens, char *command);
 char *_getenv(char *file);
 int echo_display(char **command_tokens);
 
-void execute_file_command(char *line, int count, FILE *file_ptr, char **commands);
+void execute_file_command(char *line, int count,
+FILE *file_ptr, char **commands);
 void file_command(char *name, char **commands);
 void print_negative(int num);
 void print_positive(unsigned int num);
@@ -78,10 +85,10 @@ char *create_path(char *command_token, char *token);
 int command_path(char **command_tokens);
 void print_error(char *command, int count, char **argv);
 
-
-int execute_command(char **command_tokens, char *command, int count, char **argv);
+int execute_command(char **command_tokens,
+char *command, int count, char **argv);
 int store_history(char *command);
-int command_env(__attribute__((unused))char **command_tokens, __attribute__((unused))int state);
+int command_env(__attribute__((unused))char **, __attribute__((unused))int);
 int command_echo(char **command_tokens, int state);
 int command_help(char **command_tokens, __attribute__((unused))int state);
 #endif
