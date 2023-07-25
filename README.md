@@ -2,7 +2,7 @@ Custom Shell Program
 
 This repository is an ALX PROJECT (https://intranet.alxswe.com/projects/235)This is a custom shell program built in the C programming language. It is designed to provide a command-line interface similar to a traditional shell, but with certain limitations. This README file will guide you through the features, limitations, and usage of the custom shell program.
 
-Features
+Features;
 Command Execution: The custom shell program allows you to execute various commands available in your system, including built-in commands and external programs.
 
 My readme file
