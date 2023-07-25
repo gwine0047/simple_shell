@@ -18,7 +18,7 @@ No Scripting Support: The shell does not support scripting capabilities such as 
  Usage
 In order to run this program,
 
-Clone This Repo
+You can clone This Repo using
 
 `` git clone git@github.com:gwine0047/simple_shell.git ``
 
