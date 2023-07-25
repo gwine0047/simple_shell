@@ -7,7 +7,7 @@ Command Execution: The custom shell program allows you to execute various comman
 
 My readme file
 
-Limitations
+Limitations;
 Limited Built-in Commands: The custom shell program has a limited set of built-in commands compared to traditional shells. Currently supported built-in commands include cd (change directory) and exit (terminate the shell).
 
 No Shell Variables: The custom shell program does not support the use of shell variables or environment variables. It only operates within its own scope.
