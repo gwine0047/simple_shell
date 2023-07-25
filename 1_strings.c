@@ -2,7 +2,7 @@
 /**
  * _strcpy - copies a string to another.
  * @to: string to be copied.
- * @from: new string.
+ * @from: new string produced.
  * Return: the newly copied string.
 */
 char *_strcpy(char *to, char *from)
