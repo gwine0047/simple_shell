@@ -1,6 +1,9 @@
 #include "main.h"
-
-void print_prompt()
+/**
+ * print_prompt - prints a prompt.
+ * Return: void.
+*/
+void print_prompt(void)
 {
-    puts("$ ");
+	_puts("$ ");
 }
