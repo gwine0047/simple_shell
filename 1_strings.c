@@ -46,7 +46,7 @@ int _strncmp(const char *first, const char *second, size_t n)
 /**
  * _strdup - creates a copy for a given string and allocates a memory
  * @str: copied string.
- * Return: newly copied string.
+ * Return: the newly copied string.
 */
 char *_strdup(char *str)
 {
