@@ -21,6 +21,7 @@ char *_getline()
 
 	while (ch != '\n' && ch != EOF)
 	{
+		fflush(stdin);
 		byte_read = read(STDIN_FILENO, &ch, 1);
 		if (byte_read == 0)
 		{
