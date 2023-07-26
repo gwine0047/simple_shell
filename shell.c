@@ -18,7 +18,7 @@ int main(__attribute__((unused))int argc, char **argv)
 			print_prompt();
 
 		command = _getline();
-		if (*command == '\0')
+		if (command[0] == '\0')
 			continue;
 		store_history(command);
 		command_tokens = parsing(command);
