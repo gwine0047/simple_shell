@@ -8,9 +8,9 @@
 char *_getline()
 {
 	char ch = 0;
-	static int size = BUFFER_SIZE;
+	int size = BUFFER_SIZE;
 	int a = 0;
-	static int byte_read;
+	int byte_read;
 	char *store;
 
 	store = malloc(size);
@@ -24,7 +24,7 @@ char *_getline()
 	{
 		fflush(stdin);
 		byte_read = read(STDIN_FILENO, &ch, 1);
-		if (byte_read == 0)
+		if (byte_read == -1)
 		{
 			free(store);
 			exit(EXIT_SUCCESS);
@@ -33,7 +33,7 @@ char *_getline()
 		if (store[0] == '\n')
 		{
 			free(store);
-			return ('\0');
+			return ("");
 		}
 		if (a >= size)
 		{
