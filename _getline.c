@@ -24,7 +24,7 @@ char *_getline()
 	{
 		fflush(stdin);
 		byte_read = read(STDIN_FILENO, &ch, 1);
-		if (byte_read == -1)
+		if (byte_read == 0)
 		{
 			free(store);
 			exit(EXIT_SUCCESS);
