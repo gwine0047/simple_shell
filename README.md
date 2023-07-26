@@ -5,7 +5,7 @@ This repository is an ALX PROJECT (https://intranet.alxswe.com/projects/235)This
 Features;
 Command Execution: The custom shell program allows you to execute various commands available in your system, including built-in commands and external programs.
 
-My readme file
+My readme file.
 
 Limitations;
 Limited Built-in Commands: The custom shell program has a limited set of built-in commands compared to traditional shells. Currently supported built-in commands include cd (change directory) and exit (terminate the shell).
