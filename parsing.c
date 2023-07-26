@@ -25,7 +25,7 @@ char **parsing(char *command)
 		token = strtok(NULL, "\n ");
 	}
 
-	tokens = malloc(sizeof(char *) * token_count + 1);
+	tokens = malloc(sizeof(char *) * BUFFER_SIZE);
 
 	if (tokens == NULL)
 	{
