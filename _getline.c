@@ -8,8 +8,9 @@
 char *_getline()
 {
 	char ch = '\0';
-	int size = BUFFER_SIZE;
-	int a = 0, byte_read;
+	static int size = BUFFER_SIZE;
+	int a = 0;
+	static int byte_read;
 	char *store;
 
 	store = malloc(size);
