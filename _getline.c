@@ -7,7 +7,7 @@
 
 char *_getline()
 {
-	char ch = '\0';
+	char ch = 0;
 	static int size = BUFFER_SIZE;
 	int a = 0;
 	static int byte_read;
