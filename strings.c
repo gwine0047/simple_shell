@@ -64,7 +64,7 @@ int _strcmp(char *first, char *second)
 	if (first == NULL && second == NULL)
 		return (0);
 	if (first == NULL || second == NULL)
-		return (first == NULL) ? -1 : 1;
+		return (first == NULL ? -1 : 1);
 
 	while (first[a] && second[a])
 	{
