@@ -30,7 +30,7 @@ int _strncmp(const char *first, const char *second, size_t n)
 	size_t a = 0;
 
 	if (first == NULL || second == NULL)
-		return (first == second) ? 0 : (first == NULL) ? -1 : 1;
+		return ((first == second) ? 0 : (first == NULL) ? -1 : 1);
 
 	while (second[a] && first[a] && a < n)
 	{
