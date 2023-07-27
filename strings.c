@@ -59,27 +59,23 @@ int _strlen(const char *str)
 */
 int _strcmp(char *first, char *second)
 {
-	int comparism = 0, first_length, second_length, a = 0;
+	int comparism = 0, a = 0;
 
-	first_length = _strlen(first);
-	second_length = _strlen(second);
-
+	if (first == NULL && second == NULL)
+		return (0);
 	if (first == NULL || second == NULL)
-		return (1);
+		return (first == NULL) ? -1 : 1;
 
-	if (first_length != second_length)
-		return (1);
-
-	while (first[a])
+	while (first[a] && second[a])
 	{
 		if (first[a] != second[a])
 		{
 			comparism = first[a] - second[a];
 			break;
 		}
-		else
-			continue;
+		a++;
 	}
+	if (!comparism && (first[a] || second[a]))
+		comparism = first[a] - second[a];
 	return (comparism);
 }
-

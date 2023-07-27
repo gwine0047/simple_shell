@@ -84,23 +84,33 @@ void print_negative(int num)
 */
 int _atoi(char *str)
 {
-	int index1, index2, neg, num;
+	int index = 0;
+	int num = 0;
+	int sign = 1;
+	bool digit = false;
 
-	index1 = 0;
-	num = 0;
-	neg = 0;
+	while (str[index] == ' ' || str[index] == '\t')
+		index++;
 
-	while ((str[index1] < '0' || str[index1] > '9') && str[index1] != '\0')
+	if (str[index] == '-')
 	{
-		if (str[index1] == '-')
-		neg = neg * (-1);
-		index1++;
+		sign = -1;
+		index++;
 	}
-	index2 = index1;
-	while ((str[index2] >= '0') && (str[index2] <= '9'))
+	else if (str[index] == '+')
+		index++;
+
+	while (str[index] >= '0' && str[index] <= '9')
 	{
-		num = (num * 10) + neg * ((str[index2] - '0'));
-		index2++;
+		digit = true;
+		if (num > INT_MAX / 10 || (num == INT_MAX / 10 &&
+(str[index] - '0') > INT_MAX % 10))
+			return (sign == 1 ? INT_MAX : INT_MIN);
+
+		num = num * 10 + (str[index] - '0');
+		index++;
 	}
-	return (num);
+	if (!digit)
+		return (0);
+	return (num * sign);
 }

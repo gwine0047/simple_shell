@@ -22,7 +22,7 @@ int if_inbuilt(char **command_tokens)
 
 	for (a = 0; (array + a)->command; a++)
 	{
-		if (strcmp(command_tokens[0], (array + a)->command) == 0)
+		if (_strcmp(command_tokens[0], (array + a)->command) == 0)
 		{
 			return (0);
 		}
@@ -54,7 +54,7 @@ int command_inbuilt(char **command_tokens, int state)
 
 	for (a = 0; (array + a)->command; a++)
 	{
-		if (strcmp(command_tokens[0], (array + a)->command) == 0)
+		if (_strcmp(command_tokens[0], (array + a)->command) == 0)
 		{
 			return ((array + a)->function(command_tokens, state));
 		}

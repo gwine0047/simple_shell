@@ -23,7 +23,7 @@ int main(__attribute__((unused))int argc, char **argv)
 		store_history(command);
 		command_tokens = parsing(command);
 
-		if (strcmp(command_tokens[0], "exit") == 0)
+		if (_strcmp(command_tokens[0], "exit") == 0)
 		{
 			command_exit(command_tokens, command, count, argv);
 		}

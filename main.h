@@ -17,6 +17,8 @@ extern char **environ;
 #include <stddef.h>
 #include <fcntl.h>
 #include <linux/limits.h>
+#include <stdbool.h>
+#include <limits.h>
 
 /**
 *struct inbuilt - contains a char and a function pointer.
